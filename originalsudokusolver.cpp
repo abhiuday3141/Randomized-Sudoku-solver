@@ -86,7 +86,7 @@ int main() {
    #endif
 
     int n=9;
-    int cnt=1000;
+    int cnt=80;
     
 
     
@@ -114,7 +114,7 @@ int main() {
     auto duration = duration_cast<microseconds>(stop - start);
   
 
-cout << duration.count() << "\n function calls "<<f;
+cout << duration.count() <<"\nfunction calls "<<f;
 
     return 0;
 }
