@@ -13,14 +13,20 @@
 </head>
 
 <body>
-   
-    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: white;">
+    <div class="container">
+        <h1 id="head1">Improved Sudoku Solver using random order</h1>
+    </div>
+   <div class="row">
+       <div class="column">
+    <!-- <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: white;">
 
       
        <h1 id="head1"> Improved Sudoku Solver<h1>
 
     </nav>
-    <br><br>
+
+    <br><br> -->
+    
     <div id="container">
 
         <div class="lsb tsb" id="0">
@@ -326,6 +332,41 @@
         <button type="button" class="btn btn-danger" id="generate-sudoku">Get New
             Puzzle</button>&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" class="btn btn-success" id="solve">Solve</button>
+    </div>
+    </div>
+    <div class="column">
+        <table class="table" >
+            <tr >
+                <p>Traditional Sudoku is solved by a computer using the backtracking algorithm<br>
+                In this algorithm every digit from 1-9 is tried at the<br>
+                blank spaces until a solution is reached.
+                Since the digits are tried sequentially there is high chance<br>
+                it will be very slow in cases where the blank spaces contain the higher order digits such as 5,6,7,8,9.<br>
+                This is because it will take at least 5 tries to get it correct resulting in higher number of function calls.
+                Rather than trying the digits in sequential order I have tried the digits in a random order. This helps in cases where the actual digit that must occupy its place is tried first and hence the solution is generated faster
+                <br><a href="Table.jpg">Find the comparison here</a>
+                <p>
+
+            </tr>
+            
+        
+            <!-- <tbody>
+              <tr>
+                Traditional Sudoku is solved by a computer using the backtracking algorithm. 
+
+              </tr>
+              <tr>
+                In this algorithm every digit from 1-9 is tried at the blank spaces until a solution is reached. Since the digits are tried sequentially there is high chance that it will be very slow in cases where the blank spaces contain the higher order digits such as 5,6,7,8,9.
+                This is because it will take at least 5 tries to get it correct resulting in higher number of function calls.
+               
+              
+               
+              </tr>
+            </tbody> -->
+          </table>
+    </div>
+    </div>
+
     </div>
 </body>
 
