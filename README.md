@@ -11,4 +11,6 @@ Hence to do the above we break the problem into 2 steps
 
 In the codes provided I have done exactly what is mentioned above
 The improved version is not only fast but also prevents slowing down on certain cases
-The dataset used to obtain the computation time can be found in the repository with the name "sudoku.txt"
+The dataset used to obtain the computation time can be found in the repository with the name "sudoku.tx
+
+<a href="https://abhiuday3141.github.io/Randomized-Sudoku-solver/">Working Demo</a>
