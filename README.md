@@ -6,11 +6,13 @@ In this project we have proposed a solution to counter the above problem and to 
 
 Rather than trying the digits in sequential order we have tried the digits in a random order. This helps in cases where the actual digit that has to occupy its place is tried first.
 Hence to do the above we break the problem into 2 steps
-#1)	Generate a random order where the digits don’t repeat and cause infinite loops
-#2)	Try this random order without increasing the function calls
+
+# 1)	Generate a random order where the digits don’t repeat and cause infinite loops
+# 2)	Try this random order without increasing the function calls
 
 In the codes provided I have done exactly what is mentioned above
 The improved version is not only fast but also prevents slowing down on certain cases
-The dataset used to obtain the computation time can be found in the repository with the name "sudoku.tx
+The dataset used to obtain the computation time can be found in the repository with the name "sudoku.txt"
+# This difference is significant when solving higher degree puzzles 
 
 <a href="https://abhiuday3141.github.io/Randomized-Sudoku-solver/">Working Demo</a>
