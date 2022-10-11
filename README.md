@@ -14,5 +14,5 @@ In the codes provided I have done exactly what is mentioned above
 The improved version is not only fast but also prevents slowing down on certain cases
 The dataset used to obtain the computation time can be found in the repository with the name "sudoku.txt"
 # This difference is significant when solving higher degree puzzles 
-
+# This method is very useful for generating random sudokus or random puzzle in a fast way
 <a href="https://abhiuday3141.github.io/Randomized-Sudoku-solver/">Working Demo</a>
