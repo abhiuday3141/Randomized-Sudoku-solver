@@ -1,6 +1,6 @@
 var arr = [[], [], [], [], [], [], [], [], []]
 var temp = [[], [], [], [], [], [], [], [], []]
-
+var PuzzleInstalled=false;
 for (var i = 0; i < 9; i++) {
     for (var j = 0; j < 9; j++) {
         arr[i][j] = document.getElementById(i * 9 + j);
@@ -61,7 +61,6 @@ var board = [[], [], [], [], [], [], [], [], []]
 let button = document.getElementById('generate-sudoku')
 let solve = document.getElementById('solve')
 
-console.log(arr)
 function changeBoard(board) {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 9; j++) {
@@ -78,8 +77,10 @@ function changeBoard(board) {
 
 
 button.onclick = function () {
+    PuzzleInstalled=false;
     var xhrRequest = new XMLHttpRequest()
     xhrRequest.onload = function () {
+
         var response = JSON.parse(xhrRequest.response)
         console.log(response)
         initializeTemp(temp)
@@ -89,15 +90,14 @@ button.onclick = function () {
         setTemp(board, temp)
         setColor(temp)
         changeBoard(board)
+        PuzzleInstalled=true;
     }
     xhrRequest.open('get', 'https://sugoku.herokuapp.com/board?difficulty=easy')
     //we can change the difficulty of the puzzle the allowed values of difficulty are easy, medium, hard and random
     xhrRequest.send()
 }
 
-//to be completed by student, function should not return anything
-// you can make a call to changeboard(board) function to update the state on the screen
-//returns a boolean true of false
+
 
 function isSafe(board,r,c,no){
 
@@ -193,15 +193,28 @@ function solveSudoku(board) {
           
           }
       }
-      for(let i=0;i<9;i++)
-      {
-        console.log(m[i])
-      }
     
     solveSudokuHelper(board,0,0);
 }
 
+function BoardEmpty() {
 
+    for(let i=0;i<9;i++)
+    {
+        for(let j=0;j<9;j++)
+        {
+            if(arr[i][j]!=0)
+            return false;
+        }
+    }
+    return true;
+   
+
+}
 solve.onclick = function () {
+
+    if(PuzzleInstalled)
     solveSudoku(board)
+    else
+    alert("Please Generate Puzzle First");
 }

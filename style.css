@@ -9,6 +9,20 @@ body {
 	
 	background-color: #3D394C;
 }
+input[type='text'] {
+    border: 1px dotted black;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+}
+.left {
+    border-left: 2px solid black !important;
+}
+.top {
+    border-top: 2px solid black !important;
+}
 .column {
     padding-left:50px;
     width: 50%;
